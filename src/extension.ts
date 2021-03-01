@@ -15,6 +15,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('gabrielkgg.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
+		vscode.window.createWebviewPanel('html', 'Teste', {viewColumn: 1} )
+		vscode.window.showInputBox()
 
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from Checklist!');
